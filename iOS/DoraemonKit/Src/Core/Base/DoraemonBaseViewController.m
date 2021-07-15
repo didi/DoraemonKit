@@ -17,6 +17,7 @@
  
 @property (nonatomic, strong) DoraemonNavBarItemModel *leftModel;
 
+@property (nonatomic, strong) NSArray *leftNavBarItemArray;
 @end
 
 @implementation DoraemonBaseViewController
@@ -85,6 +86,9 @@
             } else {
                 self.leftModel.image = [UIImage doraemon_xcassetImageNamed:@"doraemon_back"];
             }
+            if (self.leftNavBarItemArray) {
+                [self setLeftNavBarItems:self.leftNavBarItemArray];
+            }
         }
     }
 #endif
@@ -113,6 +117,7 @@
 }
 
 - (void)setLeftNavBarItems:(NSArray *)items{
+    _leftNavBarItemArray = items;
     NSArray *barItems = [self navigationItems:items];
     if (barItems) {
         self.navigationItem.leftBarButtonItems = barItems;

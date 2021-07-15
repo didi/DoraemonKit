@@ -130,7 +130,34 @@
         [files addObject:model];
     }
     
-    _dataArray = files.copy;
+    //_dataArray = files.copy;
+    
+    // 按名称排序，并保持文件夹在上
+    _dataArray = [files sortedArrayUsingComparator:^NSComparisonResult(DoraemonSandboxModel * _Nonnull obj1, DoraemonSandboxModel * _Nonnull obj2) {
+        
+        BOOL isObj1Directory = (obj1.type == DoraemonSandboxFileTypeDirectory);
+        BOOL isObj2Directory = (obj2.type == DoraemonSandboxFileTypeDirectory);
+        
+        // 都是目录 或 都不是目录
+        BOOL isSameType = ((isObj1Directory && isObj2Directory) || (!isObj1Directory && !isObj2Directory));
+        
+        if (isSameType) { // 都是目录 或 都不是目录
+            
+            // 按名称排序
+            return [obj1.name.lowercaseString compare:obj2.name.lowercaseString];
+        }
+        
+        // 以下是一个为目录，一个不为目录的情况
+        
+        if (isObj1Directory) { // obj1是目录
+            
+            // 升序，保持文件夹在上
+            return NSOrderedAscending;
+        }
+        
+        // obj2是目录，降序
+        return NSOrderedDescending;
+    }];
     
     [self.tableView reloadData];
 }
