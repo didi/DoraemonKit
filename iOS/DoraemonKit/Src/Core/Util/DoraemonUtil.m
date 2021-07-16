@@ -283,7 +283,6 @@
 + (void)openAppSetting{
     NSURL * url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
     if([[UIApplication sharedApplication] canOpenURL:url]) {
-        NSURL*url =[NSURL URLWithString:UIApplicationOpenSettingsURLString];
         if (@available(iOS 10.0, *)) {
             [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:^(BOOL success) {
                 
