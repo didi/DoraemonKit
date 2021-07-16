@@ -18,6 +18,11 @@
 		0AC7509C246A8EE100F87363 /* WebpDemo.webp in Resources */ = {isa = PBXBuildFile; fileRef = 0AC7509B246A8B4900F87363 /* WebpDemo.webp */; };
 		0AFBC55223BAE6F80099A8BD /* DoraemonDemoNetTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AFBC55023BAE6F80099A8BD /* DoraemonDemoNetTableViewCell.m */; };
 		B65C2263AF96F94C50A222DF /* libPods-DoraemonKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E964A2D92411C9DC5482EF /* libPods-DoraemonKitDemo.a */; };
+		C412C99526514C3200A3B526 /* UIImageView+GIFProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = C412C99426514C3200A3B526 /* UIImageView+GIFProperty.m */; };
+		C412C9AA265298CE00A3B526 /* GIFInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = C412C9A9265298CE00A3B526 /* GIFInfoView.m */; };
+		C412C9AE2652991500A3B526 /* GIFInfoWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = C412C9AD2652991500A3B526 /* GIFInfoWindow.m */; };
+		C412C9B0265372FD00A3B526 /* UIWebViewDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = C412C9AF265372FD00A3B526 /* UIWebViewDemo.m */; };
+		C472FCE326634FC900CA0BE1 /* GifInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = C472FCE226634FC900CA0BE1 /* GifInfo.m */; };
 		DA0C6F331FDEBC2E00F43588 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA0C6F311FDEBC2E00F43588 /* LaunchScreen.storyboard */; };
 		DA0C6F3A1FDEBE3800F43588 /* TestPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = DA0C6F391FDEBE3800F43588 /* TestPlugin.m */; };
 		DA4AD81A224E0EC8006F767C /* Doraemon.docx in Resources */ = {isa = PBXBuildFile; fileRef = DA4AD817224E0EC8006F767C /* Doraemon.docx */; };
@@ -69,6 +74,16 @@
 		0AFBC55023BAE6F80099A8BD /* DoraemonDemoNetTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoraemonDemoNetTableViewCell.m; sourceTree = "<group>"; };
 		0AFBC55123BAE6F80099A8BD /* DoraemonDemoNetTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoraemonDemoNetTableViewCell.h; sourceTree = "<group>"; };
 		29E964A2D92411C9DC5482EF /* libPods-DoraemonKitDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DoraemonKitDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C412C99326514C3200A3B526 /* UIImageView+GIFProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+GIFProperty.h"; sourceTree = "<group>"; };
+		C412C99426514C3200A3B526 /* UIImageView+GIFProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+GIFProperty.m"; sourceTree = "<group>"; };
+		C412C9A9265298CE00A3B526 /* GIFInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIFInfoView.m; sourceTree = "<group>"; };
+		C412C9AB265298E400A3B526 /* GIFInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIFInfoView.h; sourceTree = "<group>"; };
+		C412C9AC2652990200A3B526 /* GIFInfoWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GIFInfoWindow.h; sourceTree = "<group>"; };
+		C412C9AD2652991500A3B526 /* GIFInfoWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GIFInfoWindow.m; sourceTree = "<group>"; };
+		C412C9AF265372FD00A3B526 /* UIWebViewDemo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIWebViewDemo.m; sourceTree = "<group>"; };
+		C412C9B12653732A00A3B526 /* UIWebViewDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIWebViewDemo.h; sourceTree = "<group>"; };
+		C472FCE126634FC900CA0BE1 /* GifInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GifInfo.h; sourceTree = "<group>"; };
+		C472FCE226634FC900CA0BE1 /* GifInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GifInfo.m; sourceTree = "<group>"; };
 		DA0C6F321FDEBC2E00F43588 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA0C6F381FDEBE3800F43588 /* TestPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestPlugin.h; sourceTree = "<group>"; };
 		DA0C6F391FDEBE3800F43588 /* TestPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestPlugin.m; sourceTree = "<group>"; };
@@ -193,9 +208,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C412C99B2652960C00A3B526 /* testGif */ = {
+			isa = PBXGroup;
+			children = (
+				C412C99C2652964200A3B526 /* function */,
+				C412C99426514C3200A3B526 /* UIImageView+GIFProperty.m */,
+				C412C99326514C3200A3B526 /* UIImageView+GIFProperty.h */,
+				C472FCE126634FC900CA0BE1 /* GifInfo.h */,
+				C472FCE226634FC900CA0BE1 /* GifInfo.m */,
+			);
+			path = testGif;
+			sourceTree = "<group>";
+		};
+		C412C99C2652964200A3B526 /* function */ = {
+			isa = PBXGroup;
+			children = (
+				C412C9A9265298CE00A3B526 /* GIFInfoView.m */,
+				C412C9AB265298E400A3B526 /* GIFInfoView.h */,
+				C412C9AC2652990200A3B526 /* GIFInfoWindow.h */,
+				C412C9AD2652991500A3B526 /* GIFInfoWindow.m */,
+				C412C9AF265372FD00A3B526 /* UIWebViewDemo.m */,
+				C412C9B12653732A00A3B526 /* UIWebViewDemo.h */,
+			);
+			path = function;
+			sourceTree = "<group>";
+		};
 		DA0C6F371FDEBE2500F43588 /* Plugin */ = {
 			isa = PBXGroup;
 			children = (
+				C412C99B2652960C00A3B526 /* testGif */,
 				DA0C6F381FDEBE3800F43588 /* TestPlugin.h */,
 				DA0C6F391FDEBE3800F43588 /* TestPlugin.m */,
 				DAD46BD81FE6B7AF00E3E7BC /* StartPlugin.h */,
@@ -556,16 +597,20 @@
 				DAFE052D21BD4A4D00F97A59 /* DoraemonDemoMockGPSAnnotation.m in Sources */,
 				DAFE052921BD4A4D00F97A59 /* DoraemonDemoCrashViewController.m in Sources */,
 				DA0C6F3A1FDEBE3800F43588 /* TestPlugin.m in Sources */,
+				C472FCE326634FC900CA0BE1 /* GifInfo.m in Sources */,
 				DABBE3B221D3AA260070518E /* DoraemonUIWebViewViewController.m in Sources */,
 				0A5399852349ED5B00C47CB3 /* DoraemonDemoMemoryLeakViewController.m in Sources */,
 				0A5399882349EE7E00C47CB3 /* DoraemonDemoMemoryLeakModel.m in Sources */,
+				C412C9AA265298CE00A3B526 /* GIFInfoView.m in Sources */,
 				DAFE052C21BD4A4D00F97A59 /* DoraemonDemoCommonViewController.m in Sources */,
 				0AFBC55223BAE6F80099A8BD /* DoraemonDemoNetTableViewCell.m in Sources */,
 				0AA262E1240F8AC400BF144F /* DoraemonDemoBaseViewController.m in Sources */,
+				C412C9AE2652991500A3B526 /* GIFInfoWindow.m in Sources */,
 				DAFE052A21BD4A4D00F97A59 /* DoraemonDemoCrashMRCView.m in Sources */,
 				0A6CF27C2438BDDD00A2CBF4 /* DoraemonKitDemoi18Util.m in Sources */,
 				DAC3FA7622B8DD7400871E5C /* DoraemonDemoImageViewController.m in Sources */,
 				DAC3FA7922B8E0EE00871E5C /* DoraemonDemoImageShowViewController.m in Sources */,
+				C412C99526514C3200A3B526 /* UIImageView+GIFProperty.m in Sources */,
 				DAC8A87C1FDE2C3B00F03E6F /* DoKitAppDelegate.m in Sources */,
 				DAFE052821BD4A4D00F97A59 /* DoraemonDemoLoggerViewController.m in Sources */,
 				DAFE052E21BD4A4D00F97A59 /* DoraemonDemoMockGPSViewController.m in Sources */,
@@ -573,6 +618,7 @@
 				0A6C9CED2423219400BAEF5E /* DoraemonDemoURLProtocol2.m in Sources */,
 				0A53998B2349EE9500C47CB3 /* DoraemonDemoMemoryLeakView.m in Sources */,
 				DAFE052521BD4A4D00F97A59 /* DoraemonDemoUIViewController.m in Sources */,
+				C412C9B0265372FD00A3B526 /* UIWebViewDemo.m in Sources */,
 				DAD46BDA1FE6B7AF00E3E7BC /* StartPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
